@@ -15,7 +15,7 @@ anime =[
     ['86 EIGHTY-SIX', 'shounen', 'short', 'series'],
     ['Akame ga Kill', 'shounen', 'short', 'series'],
     ["Akebi's Sailor Uniform", 'slice of  life',  'short', 'series'],
-    ['Aoashi', 'sports', 'short', 'series']
+    ['Aoashi', 'sports', 'short', 'series'],
     ['Assassination Classroom', 'shounen', 'long', 'series'],
     ['Overlord', 'shounen', 'long', 'series'],
     ['Wolf Children', 'drama', 'short', 'movie'],
