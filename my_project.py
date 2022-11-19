@@ -1,5 +1,4 @@
 #RANDOM PICKER FOR ANIMEs TO BINGE
-
 #import random
 from random import choice
 
@@ -15,8 +14,26 @@ list_type = []
 
 
 #ask user about the genre they want
-print('What genre do you want?')
-genre = input()
+print()
+print('======================================')
+print('||     WHAT GENRE DO YOU WANT?      ||')
+print('||----------------------------------||')
+print('||          Shounen --> 1           ||')
+print('||           Drama --> 2            ||')        #design added!
+print('||       Slice of Life --> 3        ||')
+print('||          Sports --> 4            ||')
+print('======================================')
+print()
+genre = input('Type here: ')
+print()
+if genre == '1':
+    genre = 'shounen'
+elif genre == '2':
+    genre = 'drama'
+elif genre == '3':
+    genre = 'slice of life'
+elif genre == '4':
+    genre = 'sports'
 
 #for loop condition for sorting the type of genre
 for type1 in anime:
@@ -25,8 +42,13 @@ for type1 in anime:
             list_genre.append(type1[0])
 
 #ask user if they want a short or long series
-print('Do you want to watch a short or long series?')
-length = input()
+print('======================================')
+print('||      DO YOU WANT TO WATCH A      ||')
+print('||     "SHORT" OR "LONG" ANIME?     ||')
+print('======================================')
+print()
+length = input('Type short/long: ')
+print()
 
 #for loop condition for sorting if you want a short or long series
 for type2 in anime:
@@ -35,19 +57,24 @@ for type2 in anime:
             list_length.append(type2[0])
             
 #ask for user input on what type he want to watch (movie or series)
-print('What do you want to watch a movie or a series?')
-movieSeries = input()
-
+print('======================================')
+print('||   WHAT DO YOU WANT TO WATCH A    ||')
+print('||       SERIES OR A MOVIE?         ||')
+print('======================================')
+print()
+movieSeries = input('Type series/movie: ')
+print()
 #for loop condition to sort movie or series
 for type3 in anime:
     if movieSeries in type3[3]:
         if type3[0] in list_length:
             list_type.append(type3[0])
 
-
-
-
-
 #print the ANIME!
-print('blahblah')
-print(list_type)
+animelists = (list_type)
+print('======================================')
+print('||   THE ANIME YOU WILL WATCH IS... ||')
+print('======================================')
+print('|| '+choice(animelists))
+print('======================================')
+print()
