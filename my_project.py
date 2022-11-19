@@ -49,4 +49,5 @@ for type3 in anime:
 
 
 #print the ANIME!
+print('blahblah')
 print(list_type)
