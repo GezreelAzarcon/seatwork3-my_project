@@ -52,7 +52,6 @@ while True:
             if type1[0] not in list_genre:
                 list_genre.append(type1[0])
 
-    print(list_genre) #for testing
 
     #ask user if they want a short or long series
     #design 2nd input ui
@@ -81,7 +80,6 @@ while True:
                 list_length.append(type2[0])
 
                     
-    print(list_length) #for testing
 
     #ask for user input on what type he want to watch (movie or series)
     #design 3rd input ui
