@@ -11,14 +11,23 @@ anime = [['one piece', 'adventure', 'long', 'series'], ['fairy tail', 'fantasy',
 #ask for user input on what type he want to watch (movie or series)
 print('What do you want to watch a movie or a series?')
 movieSeries = input()
-list = []
-
+list_type = []
+list_genre = []
 #if movie get the index of nested movie list else get the series one
 for type in anime:
     if type[3] == movieSeries:
-        not list.append(type[0])    
-#ask user about their mood
+        list_type.append(type[0])    
 
+#ask user about the genre they want
+print('What genre do you want?')
+genre = input()
 
 #get the index of a nested list depending on mood
+for type1 in anime:
+    if type1[1] == genre:
+        if type1[0] in list_type:
+            list_genre.append(type1[0])
+            
+
 #print the ANIME!
+print(list2)
