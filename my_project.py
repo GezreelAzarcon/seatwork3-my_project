@@ -5,29 +5,48 @@ from random import choice
 
 #create a list of animes that i want to watch
 #sort the animes as nested lists and add other sub genres
-anime = [['one piece', 'adventure', 'long', 'series'], ['fairy tail', 'fantasy', 'long', 'series'], ['black clover', 'fantasy', 'long', 'series'], ['anohana', 'drama', 'short', 'movie']]
+from animelist import anime #The list is in anotehr file now!
 
-
-#ask for user input on what type he want to watch (movie or series)
-print('What do you want to watch a movie or a series?')
-movieSeries = input()
-list_type = []
+#add lists for sorting to a random anime
 list_genre = []
-#if movie get the index of nested movie list else get the series one
-for type in anime:
-    if type[3] == movieSeries:
-        list_type.append(type[0])    
+list_length = []
+list_type = []
+
+
 
 #ask user about the genre they want
 print('What genre do you want?')
 genre = input()
 
-#get the index of a nested list depending on mood
+#for loop condition for sorting the type of genre
 for type1 in anime:
     if type1[1] == genre:
-        if type1[0] in list_type:
+        if type1[0] not in list_genre:
             list_genre.append(type1[0])
+
+#ask user if they want a short or long series
+print('Do you want to watch a short or long series?')
+length = input()
+
+#for loop condition for sorting if you want a short or long series
+for type2 in anime:
+    if type2[2] == length:
+        if type2[0] in list_genre:
+            list_length.append(type2[0])
             
+#ask for user input on what type he want to watch (movie or series)
+print('What do you want to watch a movie or a series?')
+movieSeries = input()
+
+#for loop condition to sort movie or series
+for type3 in anime:
+    if movieSeries in type3[3]:
+        if type3[0] in list_length:
+            list_type.append(type3[0])
+
+
+
+
 
 #print the ANIME!
-print(list2)
+print(list_type)
