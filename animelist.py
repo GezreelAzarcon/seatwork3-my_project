@@ -19,5 +19,7 @@ anime =[
     ['Assassination Classroom', 'shounen', 'long', 'series'],
     ['Overlord', 'shounen', 'long', 'series'],
     ['Wolf Children', 'drama', 'short', 'movie'],
-    ['5 Centimeters Per Second', 'drama', 'short', 'series']
+    ['5 Centimeters Per Second', 'drama', 'short', 'series'],
+    ['The Boy and the Beast', 'shounen', 'short', 'movie'],
+    ['The Girl Who Leapt Through Time', 'drama', 'short', 'movie']
 ]
