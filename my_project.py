@@ -14,6 +14,7 @@ list_type = []
 
 
 #ask user about the genre they want
+#design genre ui
 print()
 print('======================================')
 print('||     WHAT GENRE DO YOU WANT?      ||')
@@ -24,7 +25,16 @@ print('||       Slice of Life --> 3        ||')
 print('||          Sports --> 4            ||')
 print('======================================')
 print()
-genre = input('Type here: ')
+
+#add input validation
+while True:
+    genre = input('Type here: ')
+    if genre == '1' or genre == '2' or genre == '3' or genre == '4':
+        break
+    else: 
+        print('Wrong input! Try again!')
+        continue
+
 print()
 if genre == '1':
     genre = 'shounen'
@@ -41,13 +51,26 @@ for type1 in anime:
         if type1[0] not in list_genre:
             list_genre.append(type1[0])
 
+print(list_genre) #for testing
+
 #ask user if they want a short or long series
+#design 2nd input ui
 print('======================================')
 print('||      DO YOU WANT TO WATCH A      ||')
 print('||     "SHORT" OR "LONG" ANIME?     ||')
 print('======================================')
 print()
-length = input('Type short/long: ')
+
+#add input validation
+while True:
+    length = input('Type short/long: ')
+    length = length.lower()
+    if length == 'short' or length == 'long':
+        break
+    else:
+        print('Wrong input! Try again!')
+        continue
+
 print()
 
 #for loop condition for sorting if you want a short or long series
@@ -55,14 +78,27 @@ for type2 in anime:
     if type2[2] == length:
         if type2[0] in list_genre:
             list_length.append(type2[0])
-            
+
+print(list_length) #for testing
+
 #ask for user input on what type he want to watch (movie or series)
+#design 3rd input ui
 print('======================================')
 print('||   WHAT DO YOU WANT TO WATCH A    ||')
 print('||       SERIES OR A MOVIE?         ||')
 print('======================================')
 print()
-movieSeries = input('Type series/movie: ')
+
+#add input validation
+while True:
+    movieSeries = input('Type series/movie: ')
+    movieSeries = movieSeries.lower()
+    if movieSeries == 'series' or  movieSeries == 'movie':
+        break
+    else:
+        print('Wring input! Try again!')
+        continue
+
 print()
 #for loop condition to sort movie or series
 for type3 in anime:
@@ -75,6 +111,7 @@ animelists = (list_type)
 print('======================================')
 print('||   THE ANIME YOU WILL WATCH IS... ||')
 print('======================================')
-print('|| '+choice(animelists))
+print()
+print(choice(animelists))
 print('======================================')
 print()
